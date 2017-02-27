@@ -16,6 +16,18 @@ $di->setShared('config', function () {
 });
 
 /**
+ * Router
+ */
+$di->setShared('router', function () {
+    $router = new \Phalcon\Mvc\Router(false);
+    $router->removeExtraSlashes(true);
+
+    require __DIR__ . '/router.php';
+
+    return $router;
+});
+
+/**
  * The URL component is used to generate all kind of urls in the application
  */
 $di->setShared('url', function () {
