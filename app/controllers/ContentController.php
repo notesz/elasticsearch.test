@@ -36,24 +36,24 @@ class ContentController extends ControllerBase
     protected function saveContent()
     {
         try {
-            $url = $this->request->getPost ('url');
+            $url = $this->request->getPost('url');
 
-            if (!filter_var ($url, FILTER_VALIDATE_URL) !== false) {
+            if (!filter_var($url, FILTER_VALIDATE_URL) !== false) {
                 throw new \Exception('Invalid URL');
             }
 
             $content = new \Content();
 
-            $content->setId (null);
-            $content->setTitle ('-');
-            $content->setDescription ('-');
-            $content->setContent ('-');
-            $content->setUpdated ('1976-01-10 12:30:00');
-            $content->setUrl ($url);
+            $content->setId(null);
+            $content->setTitle('-');
+            $content->setDescription('-');
+            $content->setContent('-');
+            $content->setUpdated('1976-01-10 12:30:00');
+            $content->setUrl($url);
 
-            $content->save ();
+            $content->save();
 
-            if ($content->save () === false) {
+            if ($content->save() === false) {
                 $messages = $content->getMessages();
 
                 $resultMessage = '';
