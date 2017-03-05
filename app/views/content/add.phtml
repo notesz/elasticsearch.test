@@ -2,4 +2,17 @@
     <h1>Add content</h1>
 </div>
 
-<p>This page is located at <code><?=__DIR__ . __FILE__?></code></p>
+<?php $this->flashSession->output() ?>
+
+<fieldset class="form">
+    <?=$this->tag->form(array($this->url->get(array('for' => 'content-add')), 'id' => 'content', 'method' => 'post', 'autocomplete' => 'off', 'enctype' => "multipart/form-data"))?>
+
+    <div class="form-group">
+        <label for="name">URL:</label>
+        <?=$this->tag->textField(array('url', 'class' => 'form-control', 'placeholder' => 'URL'))?>
+    </div>
+
+    <?=$this->tag->submitButton(array('Add URL', 'class' => 'btn btn-primary pull-right'))?>
+
+    <?=$this->tag->endForm()?>
+</fieldset>

@@ -5,11 +5,11 @@ defined('APP_PATH') || define('APP_PATH', BASE_PATH . '/app');
 
 return new \Phalcon\Config([
     'database' => [
-        'adapter'     => 'Mysql',
-        'host'        => 'localhost',
+        'adapter'     => 'mysql',
+        'host'        => '127.0.0.1',
         'username'    => 'dev_elastic',
         'password'    => '12345',
-        'dbname'      => 'test',
+        'dbname'      => 'dev_elastic',
         'charset'     => 'utf8',
     ],
     'application' => [
@@ -21,6 +21,6 @@ return new \Phalcon\Config([
         'pluginsDir'     => APP_PATH . '/plugins/',
         'libraryDir'     => APP_PATH . '/library/',
         'cacheDir'       => BASE_PATH . '/cache/',
-        'baseUri'        => '/elastic.test/',
+        'baseUri'        => '/',
     ]
 ]);
