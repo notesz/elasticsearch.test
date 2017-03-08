@@ -1,5 +1,7 @@
 <?php
 
+namespace ElasticTest\Modules\Frontend\Controllers;
+
 class ErrorController extends ControllerBase
 {
 
@@ -9,3 +11,4 @@ class ErrorController extends ControllerBase
     }
 
 }
+

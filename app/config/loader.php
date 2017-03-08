@@ -1,13 +1,23 @@
 <?php
 
-$loader = new \Phalcon\Loader();
+use Phalcon\Loader;
+
+$loader = new Loader();
 
 /**
- * We're a registering a set of directories taken from the configuration file
+ * Register Namespaces
  */
-$loader->registerDirs(
-    [
-        $config->application->controllersDir,
-        $config->application->modelsDir
-    ]
-)->register();
+$loader->registerNamespaces([
+    'ElasticTest\Models' => APP_PATH . '/common/models/',
+    'ElasticTest'        => APP_PATH . '/common/library/',
+]);
+
+/**
+ * Register module classes
+ */
+$loader->registerClasses([
+    'ElasticTest\Modules\Frontend\Module' => APP_PATH . '/modules/frontend/Module.php',
+    'ElasticTest\Modules\Cli\Module'      => APP_PATH . '/modules/cli/Module.php'
+]);
+
+$loader->register();

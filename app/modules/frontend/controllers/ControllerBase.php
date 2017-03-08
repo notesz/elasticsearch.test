@@ -1,4 +1,5 @@
 <?php
+namespace ElasticTest\Modules\Frontend\Controllers;
 
 use Phalcon\Mvc\Controller;
 

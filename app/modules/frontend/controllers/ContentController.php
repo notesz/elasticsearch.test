@@ -1,7 +1,10 @@
 <?php
 
+namespace ElasticTest\Modules\Frontend\Controllers;
+
 class ContentController extends ControllerBase
 {
+
     const SUCCESS = 'success';
 
     const ERROR = 'error';
@@ -78,3 +81,4 @@ class ContentController extends ControllerBase
     }
 
 }
+
