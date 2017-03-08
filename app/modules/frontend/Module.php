@@ -21,6 +21,7 @@ class Module implements ModuleDefinitionInterface
         $loader->registerNamespaces([
             'ElasticTest\Modules\Frontend\Controllers' => __DIR__ . '/controllers/',
             'ElasticTest\Modules\Frontend\Models' => __DIR__ . '/models/',
+            'ElasticTest\Common\Models' => __DIR__ . '/../../common/models/'
         ]);
 
         $loader->register();

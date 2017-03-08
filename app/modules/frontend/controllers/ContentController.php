@@ -45,7 +45,7 @@ class ContentController extends ControllerBase
                 throw new \Exception('Invalid URL');
             }
 
-            $content = new \Content();
+            $content = new \ElasticTest\Common\Models\Content();
 
             $content->setId(null);
             $content->setTitle('-');

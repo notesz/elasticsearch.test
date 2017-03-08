@@ -18,6 +18,7 @@ class Module implements ModuleDefinitionInterface
 
         $loader->registerNamespaces([
             'ElasticTest\Modules\Cli\Tasks' => __DIR__ . '/tasks/',
+            'ElasticTest\Common\Models' => __DIR__ . '/../../common/models/'
         ]);
 
         $loader->register();
