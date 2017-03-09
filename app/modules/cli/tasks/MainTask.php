@@ -5,7 +5,14 @@ class MainTask extends \Phalcon\Cli\Task
 {
     public function mainAction()
     {
-        echo "Congratulations! You are now flying with Phalcon CLI!";
+        echo PHP_EOL;
+        echo '-----------------' . PHP_EOL;
+        echo 'ElasticsearchTest' . PHP_EOL;
+        echo '-----------------' . PHP_EOL;
+        echo PHP_EOL;
+        echo 'Available commands:' . PHP_EOL;
+        echo '  run process          Generate contents';
+        echo PHP_EOL;
     }
 
 }

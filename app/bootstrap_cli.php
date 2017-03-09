@@ -3,6 +3,8 @@
 use Phalcon\Di\FactoryDefault\Cli as FactoryDefault;
 use Phalcon\Cli\Console as ConsoleApp;
 
+error_reporting(E_ALL);
+
 date_default_timezone_set('Europe/Budapest');
 
 define('BASE_PATH', dirname(__DIR__));
